@@ -1,21 +1,31 @@
+//Global Variable
+PImage pic2;
 
-/*  Author: Mark Mercer
-    Date: Halloween
-    Purpose: Learning Coordinate plane and variables, then formulae
-    Remember to use: noStroke, Stroke, Fill, Colour, & 
-      Colour Selector
-    Remember to use Debugging lines and difference between int & float
-/*  Author: Mark Mercer
-    Date: Halloween
-    Purpose: Learning Coordinate plane and variables
-    Remember to use: noStroke, Stroke, Fill, Colour, & 
-      Colour Selector
-*/
+void setup() {
+  size(500, 600);
+  
+  pic2= loadImage("download.jpg");//184 width, height 275
+  
+  image(pic2, width*0, height*0, width*1, height*1);
+}
+void draw() {  
+  fill (255,255,255);
+  ellipse (250, 105, 65, 65);
+  ellipse (250, 200, 125, 125);
+  ellipse (250, 355, 185, 185); 
+  line ((250-62.5), height*1/3, width*1/14, height*1/8);
+  line ((350-64.5), height*1/4, width*5/6, height*1/8);
+  quitButtonSetup();
+  quitButtonDraw();
+  textsetup();
+  textdraw();
+}
 
-size (500, 600);    // Width and Height Numbers, chosen because easy to work with
-ellipse (250, 112.5, 75, 75);  // Small circle, r=37.5
-ellipse (250, 225, 150, 150);        // Medium Circle, r=75
-ellipse (250, 450, 300, 300);                // Big Circle, r=150
+void mouseClicked() {
+  quitButtonMouseClicked();
+}
+
+// Big Circle, r=150
 // Eye#1
 // ellipse ();
 
